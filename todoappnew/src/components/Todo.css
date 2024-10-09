@@ -1,0 +1,121 @@
+/* Container for the entire app */
+.container {
+    width: 90%;
+    max-width: 600px; /* Ensures responsiveness */
+    margin: 50px auto; /* Centers the container */
+    background-color: #908db2;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Adds a clean font */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for input */
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing effect when focused */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* List of tasks */
+.list {
+    margin-top: 30px;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    background-color: #1c1b40;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#list-item{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-control, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-control {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
